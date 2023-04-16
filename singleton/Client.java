@@ -11,7 +11,7 @@ class MultithreadingDemo extends Thread {
         try {
             this.i.connectToDatabase();
             this.i.executeQuery();
-            
+
         }
         catch (Exception e) {
             // Throwing an exception
