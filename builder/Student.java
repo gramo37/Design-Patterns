@@ -31,11 +31,16 @@ public class Student {
         return this.instructorName;
     }
 
+    public static Builder createBuilder() {
+        return new Builder();
+    }
+
     public Student(Builder builder) {
         this.name = builder.getName();
         this.age = builder.getAge();
         this.psp = builder.getPsp();
         this.instructorName = builder.getInstructorName();
+        // Validate the Object Here
     }
 
     public static class Builder {
@@ -44,12 +49,9 @@ public class Student {
         private double psp;
         private String instructorName;
 
-        public static Builder createBuilder() {
-            return new Builder();
-        }
-
         public Student build() {
             return new Student(this);
+            // Validate the 'this' Object here
         }
 
         public String getName() {
